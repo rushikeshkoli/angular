@@ -1,0 +1,22 @@
+<h2>{{hero}}</h2>
+<div class="form-body">
+  <div>
+    <label>Public Upload: </label>
+    <input type="file" id="file1" (change)="handleFile1Input($event.target.files)" formControlName="publicUpload">
+    <button type="submit" (click)="handleClickNoAuth()">Submit</button>
+
+  </div>
+  
+  <div>
+    <label>Private Upload</label>
+    <input type="file" (change)="handleFile2Input($event.target.files)" formControlName="privateUpload">
+    <button type="submit" (click)="handleClickAuth()">Submit</button>
+
+  </div>
+
+
+  <div>
+    <button (click)="handleLogin()">Login</button>
+  </div>
+  
+</div>
